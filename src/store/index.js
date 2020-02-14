@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     ramens:[],
     freeword:"",
-    apiUrl:"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=c30f6dcd7031473472461a2d6a1e538e&category_s=RSFST08008&hit_per_page=9&freeword=",
+    apiUrl:"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=&hit_per_page=9&freeword=",
     user: {},
     status: false
   },
