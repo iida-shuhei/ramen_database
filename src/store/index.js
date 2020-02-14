@@ -8,7 +8,7 @@ export default new Vuex.Store({
   state: {
     ramens:[],
     freeword:"",
-    apiUrl:"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=&hit_per_page=9&freeword=",
+    apiUrl:"https://api.gnavi.co.jp/RestSearchAPI/v3/?keyid=&hit_per_page=9",
     user: {},
     status: false
   },
@@ -26,7 +26,7 @@ export default new Vuex.Store({
   actions: {
     async getRamen({state, commit}, freeword){
       try {
-        let response = await axios.get(`${state.apiUrl}` + freeword);
+        let response = await axios.get(`${state.apiUrl}` + '&freeword=' + freeword);
         commit("setRamen", response.data.rest);
         console.log(response.data.rest)
       } catch(error) {
